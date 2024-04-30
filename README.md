@@ -1,7 +1,7 @@
 Hi There✨ I'm Kadhar S, and This is My GitHub Profile. Here You'll Find a Variety of Projects, Repositories, and Contributions Related to My Interests and Work. Feel Free to Explore & Engage With the Content!!.
 
 **About Me:**
-I'm a Odoo Developer Passionate About Odoo. I Enjoy to Play Badminton and Love to Learn New Things.
+I'm a Odoo Developer Passionate About Odoo. I Enjoy to Play Badminton🏸️🏸️ and Love to Learn New Things.
 
 **My Projects:**
 Here Are Some of the Projects I'm Currently Working On:
