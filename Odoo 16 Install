@@ -1,0 +1,15 @@
+Install the odoo 16 with database...
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 --single-branch .
+sudo pip3 install -r requirements.txt
+./odoo-bin --addons-path=addons --xmlrpc-port=8029 --db_host=localhost -r odoo -w odoo@123 -d test_odoo16_vantagecore --db-filter test_odoo16_vantagecore
+http://localhost:8019/web/database/selector ====> Selecte the DB and do Backup. And Download it.
+if database access not given ====> please goto, .odoorc and change the admin password.
+
+Install the Odoo 16 Without DB...
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://www.github.com/odoo/odoo --depth 1 --branch 16.0 --single-branch .
+sudo pip3 install -r requirements.txt
+./odoo-bin --addons-path=addons --xmlrpc-port=8029 --db_host=localhost -r odoo -w odoo@123 =====> Need to add the -d and --db-filter
