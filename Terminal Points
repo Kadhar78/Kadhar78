@@ -1,48 +1,355 @@
-<img src="/partner_statements/static/description/astir_statement_footer.png" style="width: 625px; height: 280px;">
+sudo npm install -g less@3.10.3
+
+astir_old = ./odoo-bin --addons-path=addons,astir_live,astir_live/debranding/access-addons,astir_live/debranding/mail-addons,astir_live/debranding/misc-addons,astir_live/saasmate_rma,astir_live/statementreports,astir_live/saasmate_data_import,astir_live/merp_picking_wave_core --xmlrpc-port=8011 --db_host=localhost -r odoo -w odoo@123 -d astir_live --db-filter astir_live
+
+astir_new = ./odoo-bin --addons-path=addons,astir_live,astir_live/debranding/access-addons,astir_live/debranding/mail-addons,astir_live/debranding/misc-addons,astir_live/saasmate_rma,astir_live/statementreports,astir_live/saasmate_data_import,astir_live/merp_picking_wave_core,astir_live/product_multiple_barcodes --xmlrpc-port=8011 --db_host=localhost -r odoo -w odoo@123 -d astir_live --db-filter astir_live
+
+odoo 17 = ./odoo-bin --addons-path=addons --xmlrpc-port=8018 --db_host=localhost -r odoo -w odoo@123 -d odoo17db --db-filter odoo17db
+
+Saasmate = ./odoo-bin --addons-path=addons,saasmate_erp_v13,saasmate_erp_v13/timesheet --xmlrpc-port=8013 --db_host=localhost -r odoo -w odoo@123 -d saasmate --db-filter saasmate
+
+new_vantage = ./odoo-bin --addons-path=addons,vantagecore,custome_addons  --xmlrpc-port=8019 --db_host=localhost -r odoo -w odoo@123 -d vantage --db-filter vantage
+
+vantagecore = 	./odoo-bin --addons-path=addons,vantagecore,custome_addons  --xmlrpc-port=8019 --db_host=localhost -r odoo -w odoo@123 -d Odoo_16 --db-filter Odoo_16
+https://xlsxwriter.readthedocs.io/worksheet.html#worksheet-merge_range
+Custome_vantagecore = 	./odoo-bin --addons-path=addons,custome_addons  --xmlrpc-port=8017 --db_host=localhost -r odoo -w odoo@123 -d Local_Odoo_16 --db-filter Local_Odoo_16
+
+bike orders = ./odoo-bin --addons-path=addons,custome_addons --xmlrpc-port=8010 --db_host=localhost -r odoo -w odoo@123 -d odoo10 --db-filter odoo10
+
+SROWF/E/2023/42137
+
+$poa-head-color: #017e84 !default; 
 
 
+margin: 10px 20px; 		astir_testsaas astir_testsaas (copy)
+
+sudo rm -r astir_test
 
 
-margin: 10px 20px; 
+https://Gopynath@bitbucket.org/nhmtech/astir_test.git
+
+astir live - Clone:- git clone https://Gopynath@bitbucket.org/saasmate/astir_live.git
+
 
 
 git config --global user.email "kadhar@saasmate.co.in"
 git config --global user.name "kadhar"
 
 
-
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 git status
 git add .
 git push origin master
-git pull origin master
-git commit -m "Ticket/2023/003521 - Monthly Statement Emails"
-git push origin master
+git pull origin master	38MgkgasUzNxfQBg5FJ6
+git commit -m "Ticket/2023/003591 - Delivery Order Warning | Trigger Invoice" & Ticket/2023/003589 - Starting a New Clinic question on Registration
+git push origin master	38MgkgasUzNxfQBg5FJ6
 git pull origin master
 
 next check with bitbucket => astir_test => Commits (We can saw the ticket number and message)
 
 Server side:-
-
-sudo ssh root@149.28.189.142 (saasmate Password)=> Yes => Connection Server Password
-sudo ssh root@221.121.132.245 (test server password)
+**************************************ASTIR*****************************************
+sudo ssh root@149.28.189.142 (saasmate Password)=> Yes => Connection Server Password Ba?9W4fK3t-fVxgk
+sudo ssh root@221.121.132.245 (test server password) h3fBmRhStG7887cU
 cd /opt/odoo/astir/astir_test
-git pull origin master
+git pull origin master z7UEudrFePCJEDhVtEUj	
 sudo service odoo-astir restart
-tail -f /var/log/odoo/astir/astir_16_05_2023.log
+tail -f /var/log/odoo/astir/astir_16_05_2023_1.log
 
-----------------------------------------------------------------------
+
+git clone https://Saasmate@bitbucket.org/nhmtech/saasmate_erp_v13.git
+***************************************VANTAGECORE****************************************
+sudo ssh root@149.28.189.142 (saasmate Password)=> Yes => Connection Server Password
+cd pemkey/
+sudo ssh -i saasmate.pem ubuntu@13.211.94.125
+cd /opt/saasmate/vantagecore/vantagecore
+sudo git pull origin master
+sudo service odoo-vantagecore restart
+sudo tail -f /var/log/odoo/odoo-vantagecore.log 
+
+
+*************************************SAASMATE*********************************************
+cd /opt/odoo/saasmate/saasmate_erp_v13/
+sudo service odoo-saas restart
+saasmate => tail -f /var/log/odoo/saasmate/odoo-saas-new1.log 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+cd ..
+sudo rm -r saasmate_erp_v13/
+git clone https://Saasmate@bitbucket.org/nhmtech/astir_test.git
+cd astir_test
+sudo service odoo-astir restart
+tail -f /var/log/odoo/astir/astir_16_05_2023_1.log
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 sudo ps ax | grep odoo
 kill -9 24654
 
---------------------------------------------------------------------------
-
-./odoo-bin --addons-path=addons,astir_live,astir_live/debranding/access-addons,astir_live/debranding/mail-addons,astir_live/debranding/misc-addons,astir_live/saasmate_rma,astir_live/statementreports,astir_live/saasmate_data_import,astir_live/merp_picking_wave_core --xmlrpc-port=8011 --db_host=localhost -r odoo -w odoo@123 -d astir_live --db-filter astir_live
-
 -------------------------------------------------------------------------
 
+#crate database:
+sudo -u postgres psql => Password needed
+create user Kadhar with superuser
+/du
+#Alter 
+sudo -u postgres psql => Password needed
+Alter user Kadhar with superuser
+/du
+
+----------------------------------------------------------------
+
+#cron update and mail delete
+
+update ir_cron set active = False;
+delete from ir_mail_server;
+
+-----------------------------------------------------------------
+select 
+pt.sale_type,
+(select name from  product_category where id = pt.parent_id),
+(select name from  product_category where id = pt.categ_id),
+
+ai.partner_id,
+ins.name from
+account_invoice_line as ail,product_product as pp,product_template as pt,
+account_invoice as ai,res_partner as rp,
+industry_sector as ins
+where ail.id = 1465465
+and ail.invoice_id = ai.id
+and ail.product_id = pp.id
+and pp.product_tmpl_id = pt.id
+and ai.commercial_partner_id = rp.id
+and rp.industrysector_id = ins.id
+
+
+        if new_id.category and new_id.category.name == 'Project Deliveries':
+            new_id.sub_category_id = self.env['website.support.ticket.subcategory'].search([('name','=','Project Deliveries')]).id
+            
+----------------------------------------------
+ 
+
+sudo ssh root@117.120.8.75
+TDCL8tJ6OFupsX5A
+
+DB:-
+cd /home/DBBACKUP
+ls -l
+cd /opt/odoo_scripts/
+ls
+./dropbox_uploader.sh -f dropboxUploader_conf upload /home/DBBACKUP/astir_live_2024_05_15_14_00_01_filestore.tar.gz SaasERP_Backup/Astir_New/
+
+astir_live_2024_05_06_14_00_01_filestore.tar.gz	- R
+
+astir_live_2024_05_07_14_00_01.dump.out.gz  		- R
+
+astir_live_2024_05_07_14_00_01_filestore.tar.gz 	- R
+
+axis_trust_2024_05_03_14_00_01_filestore.tar.gz
+
+axis_trust_2024_04_03_14_00_01.dump.out.gz 
+
+
+----------------------------------
+
+./dropbox_uploader.sh -f dropboxUploader_conf upload /home/DBBACKUP/saasmate_live_2023_11_01_15_30_01_filestore.tar.gz SaasERP_Backup/SaasmateErp_Live/
+
+saasmate_erp_v13_source_2023_10_29_15_30_01.tar.gz	- Done
+
+------------
+select sales_executive
+from res_partner as rp, res_users as ru
+----------
+
+SELECT sales_executive AS Sales_Executive_Name,rp.sales_executive AS Sales_Executive_Name,COUNT(*) AS Company_Count  
+FROM res_partner as rp, res_users as ru
+where rp.sales_executive = ru.id
+GROUP BY sales_executive;
+--------------------------
+SELECT
+    EXTRACT(MONTH FROM confirmation_date) AS "Month",
+    EXTRACT(YEAR FROM confirmation_date) AS "Year",
+    COUNT(*) AS "Count of Orders"
+FROM
+    sale_order as so
+	
+WHERE so.state = 'sale'
+    AND confirmation_date >= CURRENT_DATE - INTERVAL '12 months'
+	
+GROUP BY
+    EXTRACT(MONTH FROM confirmation_date), EXTRACT(YEAR FROM confirmation_date);
+/////////////////////////////TERMINAL LEARN\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    
+https://www.hostinger.in/tutorials/linux-commands 
+    
+  
+    
+    
+kadhar@email.com
+
+https://astir.saasmate.net/web#view_type=kanban&model=account.journal&menu_id=128&action=207
+
+http://localhost:8015/web#action=340&model=crm.lead&view_type=kanban&cids=1&menu_id=229
+
+ createDoughnutChart: function() {
+        var self = this;
+        var ctx = this.$el.find('#createDoughnutChart')
+        var functionBeforeDraw = function (chartInstance) {
+        var ctx = chartInstance.chart.ctx;
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+        };
+        var bg_color_list = []
+        for (var i=0;i<=12;i++){
+            bg_color_list.push(self.getRandomColor())
+        }
+        rpc.query({
+                model: 'calendar.event',
+                method: 'get_appointment_count',
+            })
+            .then(function(result)) {
+                var data = result.data
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                                'August', 'September', 'October', 'November', 'December']
+                var month_data = [];
+                if (data){
+                    for (var i = 0; i<months.length; i++){
+                    months[i] == data[months[i]]
+                    var day_data = months[i];
+                    var month_count = data[months[i]];
+                    if (!month_count){
+                        month_count = 0;}
+                    month_data[i] = month_count
+                    }
+                    }
+            }
+            
+            
+        var doughnutChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',' August', 'September', 'October',
+                            'November', 'December'],
+                datasets: [{
+                            label: 'Dataset',
+                            data: [65, 59, 80, 81, 56, 55, 40],
+                            fill: false,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                          }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                legend: {
+                    labels: {
+                        usePointStyle: true,
+                    }
+                }
+            }
+        });
+    },
 
 
 
+[('last120_sale_count','>',0),('is_company','=',True),('account_id','in',(1950,2070))]
+[('last90_sale_count','>',0),('is_company','=',True),('account_id','in',(1950,2070))]
+[('last60_sale_count','>',0),('is_company','=',True),('account_id','in',(1950,2070))]
+[('day_30_sale_count','>',0),('is_company','=',True),('account_id','in',(1950,2070))]
+
+
+
+[('is_company','=',True),('account_id','in',(1950,2070))]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+POS Stock Quantity Pro
+
+odoo 16 vantagecore changes
+
+pos_debranding - module
+
+
+Dealing Office Bike.
+Model: 2013
+Recently Serviced. Price is $35,000.00
+Not Negotiable. ( I need To Purchase The Laptop. So, Iam selling the Bike.)
+
+
+    
+ssh -i "Saas_Linux.pem" ec2-user@ec2-16-170-224-17.eu-north-1.compute.amazonaws.com
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sale Order Confirm - Ticked,
+Delivery Order Validation - Ticked, 
+Product Expiry Date Update (Cron) - Ticked.
+In purchase order, After Purchased, Receive Products (action_view_picking) -> (It will Goto stock.picking table) -> Then, Validate (do_new_transfer) - Ticked
+
+Manual Sync Stock - UnTicked.
+
+
+def update_timesheet_multi(self):
+for res in self:
+    tasks = self.env['project.task'].search([('ticket_id.ticket_number', '=', res.ticket_number)])
+    print(tasks, 000000000000000000)
+    for rec in tasks:
+        timesheet_records = rec.timesheet_ids.filtered(lambda r: rec.ticket_id.ticket_number == res.ticket_number)
+        print(timesheet_records, 1111111111111111111)
+        if timesheet_records:
+            for i in timesheet_records:
+                res.timesheet_ids.timesheet_date = i.date
+                print(i.date, 222222222222222)
+                res.timesheet_ids.desc = i.name
+                res.timesheet_ids.hours = i.unit_amount
+                print(i.unit_amount, 3333333333333333333)
+                        
+
+def update_timesheet_multi(self):
+for res in self:
+    tasks = self.env['project.task'].search([('ticket_id.ticket_number', '=', res.ticket_number)])
+    for rec in tasks:
+        timesheet_records = rec.timesheet_ids.filtered(
+            lambda r: rec.ticket_id.ticket_number == res.ticket_number)
+        if timesheet_records:
+            for timesheet_record in timesheet_records:
+                if timesheet_record:
+                    new_timesheet_record = self.env['website.support.ticket.timesheet'].create({
+                        'timesheet_date': timesheet_record.date,
+                        'desc': timesheet_record.name,
+                        'hours': timesheet_record.unit_amount,
+                    })
+                    res.timesheet_ids |= new_timesheet_record                   
