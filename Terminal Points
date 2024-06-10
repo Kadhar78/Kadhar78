@@ -1,0 +1,48 @@
+<img src="/partner_statements/static/description/astir_statement_footer.png" style="width: 625px; height: 280px;">
+
+
+
+
+margin: 10px 20px; 
+
+
+git config --global user.email "kadhar@saasmate.co.in"
+git config --global user.name "kadhar"
+
+
+
+
+
+git status
+git add .
+git push origin master
+git pull origin master
+git commit -m "Ticket/2023/003521 - Monthly Statement Emails"
+git push origin master
+git pull origin master
+
+next check with bitbucket => astir_test => Commits (We can saw the ticket number and message)
+
+Server side:-
+
+sudo ssh root@149.28.189.142 (saasmate Password)=> Yes => Connection Server Password
+sudo ssh root@221.121.132.245 (test server password)
+cd /opt/odoo/astir/astir_test
+git pull origin master
+sudo service odoo-astir restart
+tail -f /var/log/odoo/astir/astir_16_05_2023.log
+
+----------------------------------------------------------------------
+
+sudo ps ax | grep odoo
+kill -9 24654
+
+--------------------------------------------------------------------------
+
+./odoo-bin --addons-path=addons,astir_live,astir_live/debranding/access-addons,astir_live/debranding/mail-addons,astir_live/debranding/misc-addons,astir_live/saasmate_rma,astir_live/statementreports,astir_live/saasmate_data_import,astir_live/merp_picking_wave_core --xmlrpc-port=8011 --db_host=localhost -r odoo -w odoo@123 -d astir_live --db-filter astir_live
+
+-------------------------------------------------------------------------
+
+
+
+
